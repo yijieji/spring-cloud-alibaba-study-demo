@@ -1,0 +1,11 @@
+spring:
+  application:
+    # 应用名字
+    name: order-service
+  cloud:
+    nacos:
+      discovery:
+        # Nacos注册中心的地址
+        server-addr:  192.168.187.100:8848
+server:
+  port: 8006

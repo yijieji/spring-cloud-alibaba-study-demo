@@ -1,0 +1,20 @@
+#spring:
+#  application:
+#    # 应用名字
+#    name: springboot_rocketmq_producer
+
+spring:
+  application:
+    name: rocketmq
+
+rocketmq:
+  name-server: 192.168.187.100:9876
+  producer:
+    # 生产组
+    group: my-group1
+    #超时时间
+    send-message-timeout: 3000
+
+demo:
+  rocketmq:
+    topic: test

@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    #多环境配置
+    active: dev
+  application:
+    #项目名字
+    name: payment-config-service
+  cloud:
+    nacos:
+      config:
+        #服务器地址
+        server-addr: 192.168.187.100:8848
+        #默认为Public命名空间,可以省略不写 #对应建立的命名空间的UUID
+        namespace: 8106c0e3-cd8c-4371-b771-e64d92321fb5
+        #指定文件后缀
+        file-extension: yaml
+        #文件名 -- 如果没有配置则默认为 ${spring.appliction.name}
+        prefix: ${spring.application.name}
+        #指定配置群组 --如果是Public命名空间 则可以省略群组配置
+        group: DEFAULT_GROUP
+server:
+  port: 8085

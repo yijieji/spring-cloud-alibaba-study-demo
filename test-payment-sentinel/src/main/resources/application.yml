@@ -1,0 +1,14 @@
+server:
+  port: 8001
+spring:
+  application:
+    #应用名字
+    name: payment-sentinel-service
+  cloud:
+    sentinel:
+      transport:
+        # Sentinel 控制台地址
+        dashboard: 192.168.187.100:8081
+        # 关闭context整合
+        web-context-unify: false
+
